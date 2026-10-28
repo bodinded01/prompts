@@ -1,0 +1,89 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Prompts"><meta name="theme-color" content="#111">
+<title>Prompts</title><link rel="apple-touch-icon" href="icon.png">
+<style>body{font-family:-apple-system,sans-serif;background:#111;color:#eee;margin:0;padding:16px 16px 40px}h1{font-size:22px}.card{background:#1e1e1e;border-radius:14px;padding:14px;margin:14px 0}h2{margin:0 0 4px;font-size:18px}.u{margin:0 0 10px;color:#aaa;font-size:14px}button{width:100%;padding:14px;font-size:17px;border:0;border-radius:10px;background:#0a84ff;color:#fff}button.ok{background:#30a14e}textarea{width:100%;box-sizing:border-box;margin-top:10px;background:#111;color:#ccc;border:1px solid #333;border-radius:8px;font-size:12px;padding:8px}</style></head>
+<body><h1>คลัง Prompt รูปภาพ</h1><div class="card"><h2>Photo Enhance</h2><p class="u">แนบรูป 1 รูป</p><button onclick="cp('photo',this)">คัดลอก</button><textarea id="photo" readonly rows="6">ULTRA-REALISTIC PHOTO ENHANCEMENT &amp; RESTORATION
+
+Enhance the uploaded photo to maximum clarity, sharpness, and natural photographic quality while strictly preserving the original image and identities.
+
+1. SHARPNESS &amp; RESTORATION
+
+* Improve resolution, fine details, and clarity using realistic AI super-resolution.
+* Reduce motion blur, camera shake, noise, pixelation, haze, and compression artifacts.
+* Recover facial features, hair strands, skin pores, sweat droplets, clothing textures, and background details wherever possible.
+* Maintain crisp, natural details even when zoomed in, without oversharpening, ghosting, or invented features.
+
+2. NATURAL COLORS &amp; LIGHTING
+
+* Restore vivid yet realistic colors, accurate white balance, balanced contrast, and natural lighting.
+* Remove dullness, gray haze, unwanted color casts, and washed-out appearance.
+* Preserve authentic skin tones without excessive redness, pink cheeks, or artificial saturation.
+* Maintain realistic highlights, shadows, skin sheen, and visible sweat.
+
+3. STRICT IDENTITY &amp; CONTENT PRESERVATION
+
+* Preserve every person’s exact facial identity, facial proportions, expression, hairstyle, body shape, pose, and natural skin texture.
+* Keep the original composition, clothing, objects, background, perspective, and camera angle unchanged.
+* Never reshape, beautify, smooth skin, replace faces, or add/remove elements.
+* Preserve natural imperfections, pores, sweat, and realistic photographic textures.
+
+4. PROFESSIONAL PHOTO QUALITY
+
+* Achieve natural DSLR-level clarity with realistic fine details and balanced micro-contrast.
+* Avoid plastic skin, artificial HDR, excessive sharpening, halos, ghosting, and AI-generated textures.
+* Prioritize authentic realism and identity accuracy over artificial perfection.
+
+FINAL OUTPUT: Maximum supported resolution (preferably 4K–8K), minimal compression, crystal-clear details, naturally vibrant colors, realistic skin and sweat textures.
+
+CRITICAL: Enhance and restore the ORIGINAL photograph — DO NOT recreate or reinterpret it. Never change identities or invent missing facial details.</textarea></div><div class="card"><h2>Identity</h2><p class="u">แนบรูปอ้างอิงทั้งหมดของคนเดียวกัน</p><button onclick="cp('identity',this)">คัดลอก</button><textarea id="identity" readonly rows="6">ULTRA-REALISTIC IDENTITY &amp; FULL-BODY RECONSTRUCTION
+
+Use ALL uploaded reference images of the SAME PERSON to reconstruct their exact facial identity and complete physical appearance with maximum accuracy.
+
+**IDENTITY &amp; BODY LOCK**
+* Combine consistent facial and body characteristics from all references, not just the face.
+* Preserve exact face shape, eyes, nose, lips, jawline, hairstyle, skin tone, and natural asymmetry.
+* Match original height-to-body proportions, shoulders, chest, waist, arms, legs, body build, and natural silhouette.
+* Use the clearest full-body reference as the PRIMARY source for body proportions, pose, clothing, and overall appearance.
+* Never beautify, slim, reshape, add muscles, or replace the original face or body.
+
+**GENERATE 2 SEPARATE IMAGES:**
+
+**IMAGE 1 — FRONT-FACING PORTRAIT**
+* Face directly toward the camera, looking straight ahead.
+* Show head and shoulders, neutral expression.
+* Extremely sharp facial details, natural skin pores, accurate facial geometry.
+* Soft studio lighting and neutral background.
+
+**IMAGE 2 — EXACT FULL-BODY PHOTO**
+* Show the entire person from head to toe, including hands and feet.
+* Match the original full-body reference&#x27;s body shape, proportions, pose, clothing, and appearance.
+* Preserve the same facial identity as Image 1.
+* Keep the original sitting or standing position and body orientation.
+* Do not invent a different body or change the person&#x27;s physical build.
+
+**PHOTO ENHANCEMENT**
+* Maximum realistic sharpness and resolution.
+* Reduce blur, noise, haze, and compression artifacts.
+* Restore natural colors, accurate white balance, skin texture, hair, and clothing details.
+* Keep images clear when zoomed without oversharpening.
+* No plastic skin, beauty filters, artificial HDR, or AI distortions.
+
+**FINAL OUTPUT**
+Two separate ultra-realistic photographs, not a collage. Maximum supported resolution, preferably 4K–8K.
+
+**ABSOLUTE PRIORITY: Exact facial identity + original full-body resemblance + natural photographic realism.**
+DO NOT change the face, body proportions, pose, clothing, or distinctive characteristics. Both images must look like the EXACT SAME REAL PERSON shown in the uploaded references.</textarea></div><div class="card"><h2>Face Swap</h2><p class="u">รูปที่ 1 = หน้า, รูปที่ 2 = ตัว</p><button onclick="cp('face',this)">คัดลอก</button><textarea id="face" readonly rows="6">ULTRA-REALISTIC FACE SWAP
+
+Use Image 1 as FACIAL IDENTITY ONLY.
+Use Image 2 as BODY, POSE, CLOTHING, SKIN TONE, LIGHTING, BACKGROUND, and EXPRESSION.
+
+Replace ONLY the face in Image 2 with the exact facial identity from Image 1 (eyes, eyebrows, nose, lips, jawline, proportions, natural asymmetry).
+
+- Reconstruct the face naturally to match Image 2’s head angle, perspective, and lighting.
+- Match skin tone, undertone, brightness, and color temperature of the face perfectly to the neck and body in Image 2. No color mismatch.
+- Keep Image 2’s body, pose, clothing, background, and overall expression 100% unchanged.
+- Seamless neck integration, realistic skin texture with pores, photorealistic, no visible edit artifacts.
+
+Negative: no plastic skin, no oversized head, no color boundary between face and neck, no identity drift.</textarea></div>
+<script>function cp(id,b){const t=document.getElementById(id);const done=()=>{b.textContent='คัดลอกแล้ว';b.classList.add('ok');setTimeout(()=>{b.textContent='คัดลอก';b.classList.remove('ok')},1500)};
+if(navigator.clipboard){navigator.clipboard.writeText(t.value).then(done,()=>{t.select();document.execCommand('copy');done()})}else{t.select();t.setSelectionRange(0,99999);document.execCommand('copy');done()}}</script></body></html>
