@@ -85,6 +85,6 @@ Replace ONLY the face in Image 2 with the exact facial identity from Image 1 (ey
 - Keep Image 2’s body, pose, clothing, background, and overall expression 100% unchanged.
 - Seamless neck integration, realistic skin texture with pores, photorealistic, no visible edit artifacts.
 
-Negative: no plastic skin, no oversized head, no color boundary between face and neck, no identity drift.</textarea></div>
+Negative: no plastic skin, no oversized head, no color boundary between face and neck, no identity drift.</textarea></div><div class="card"><h2>Upscale Only</h2><p class="u">แนบรูป 1 รูป (เบลอ/มืด)</p><button onclick="cp('upscale',this)">คัดลอก</button><textarea id="upscale" readonly rows="6">Improve this photo technically only: increase resolution and sharpness, reduce noise, correct white balance to natural colors, brighten underexposed areas gently. Do not change any content, face, expression, body, clothing or background. It should look like the exact same photo taken with a better camera. Natural warm skin with real pores and texture, no smoothing or beautify.</textarea></div>
 <script>function cp(id,b){const t=document.getElementById(id);const done=()=>{b.textContent='คัดลอกแล้ว';b.classList.add('ok');setTimeout(()=>{b.textContent='คัดลอก';b.classList.remove('ok')},1500)};
 if(navigator.clipboard){navigator.clipboard.writeText(t.value).then(done,()=>{t.select();document.execCommand('copy');done()})}else{t.select();t.setSelectionRange(0,99999);document.execCommand('copy');done()}}</script></body></html>
