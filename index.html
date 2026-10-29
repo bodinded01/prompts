@@ -73,18 +73,16 @@ Use ALL uploaded reference images of the SAME PERSON to reconstruct their exact 
 Two separate ultra-realistic photographs, not a collage. Maximum supported resolution, preferably 4K–8K.
 
 **ABSOLUTE PRIORITY: Exact facial identity + original full-body resemblance + natural photographic realism.**
-DO NOT change the face, body proportions, pose, clothing, or distinctive characteristics. Both images must look like the EXACT SAME REAL PERSON shown in the uploaded references.</textarea></div><div class="card"><h2>Face Swap</h2><p class="u">รูปที่ 1 = หน้า, รูปที่ 2 = ตัว</p><button onclick="cp('face',this)">คัดลอก</button><textarea id="face" readonly rows="6">ULTRA-REALISTIC FACE SWAP
-
-Use Image 1 as FACIAL IDENTITY ONLY.
-Use Image 2 as BODY, POSE, CLOTHING, SKIN TONE, LIGHTING, BACKGROUND, and EXPRESSION.
-
-Replace ONLY the face in Image 2 with the exact facial identity from Image 1 (eyes, eyebrows, nose, lips, jawline, proportions, natural asymmetry).
-
-- Reconstruct the face naturally to match Image 2’s head angle, perspective, and lighting.
-- Match skin tone, undertone, brightness, and color temperature of the face perfectly to the neck and body in Image 2. No color mismatch.
-- Keep Image 2’s body, pose, clothing, background, and overall expression 100% unchanged.
-- Seamless neck integration, realistic skin texture with pores, photorealistic, no visible edit artifacts.
-
-Negative: no plastic skin, no oversized head, no color boundary between face and neck, no identity drift.</textarea></div><div class="card"><h2>Upscale Only</h2><p class="u">แนบรูป 1 รูป (เบลอ/มืด)</p><button onclick="cp('upscale',this)">คัดลอก</button><textarea id="upscale" readonly rows="6">Improve this photo technically only: increase resolution and sharpness, reduce noise, correct white balance to natural colors, brighten underexposed areas gently. Do not change any content, face, expression, body, clothing or background. It should look like the exact same photo taken with a better camera. Natural warm skin with real pores and texture, no smoothing or beautify.</textarea></div>
+DO NOT change the face, body proportions, pose, clothing, or distinctive characteristics. Both images must look like the EXACT SAME REAL PERSON shown in the uploaded references.</textarea></div><div class="card"><h2>Face Swap</h2><p class="u">รูปที่ 1 = หน้า, รูปที่ 2 = ตัว</p><button onclick="cp('face',this)">คัดลอก</button><textarea id="face" readonly rows="6">Ultra-realistic face swap.
+Use Image 1 as the exact facial identity only (eyes, eyebrows, nose, lips, jawline, face shape, proportions, and natural asymmetry).
+Use Image 2 as the base: body, pose, clothing, skin tone, lighting, shadows, background, and overall expression.
+Replace ONLY the face in Image 2 with the face from Image 1.
+Requirements:
+- Reconstruct the face to match Image 2’s head angle, perspective, and lighting perfectly.
+- Match skin tone, undertone, brightness, and color temperature of the face exactly to the neck and body in Image 2. No color mismatch.
+- Seamless neck integration, natural skin texture with pores, realistic shadows and highlights.
+- Keep Image 2’s body, pose, clothing, background, and expression 100% unchanged.
+- Photorealistic result, no floating face, no plastic skin, no visible edit artifacts.
+Negative prompt: plastic skin, oversized head, color boundary between face and neck, floating face, mismatched lighting, identity drift, blurry face, artificial look.</textarea></div><div class="card"><h2>Upscale Only</h2><p class="u">แนบรูป 1 รูป (เบลอ/มืด)</p><button onclick="cp('upscale',this)">คัดลอก</button><textarea id="upscale" readonly rows="6">Improve this photo technically only: increase resolution and sharpness, reduce noise, correct white balance to natural colors, brighten underexposed areas gently. Do not change any content, face, expression, body, clothing or background. It should look like the exact same photo taken with a better camera. Natural warm skin with real pores and texture, no smoothing or beautify.</textarea></div>
 <script>function cp(id,b){const t=document.getElementById(id);const done=()=>{b.textContent='คัดลอกแล้ว';b.classList.add('ok');setTimeout(()=>{b.textContent='คัดลอก';b.classList.remove('ok')},1500)};
 if(navigator.clipboard){navigator.clipboard.writeText(t.value).then(done,()=>{t.select();document.execCommand('copy');done()})}else{t.select();t.setSelectionRange(0,99999);document.execCommand('copy');done()}}</script></body></html>
